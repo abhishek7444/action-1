@@ -15,7 +15,7 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: my-artifact
-            path: output.txt
+            path: ./output.txt
           
     
     Test_job:
@@ -27,7 +27,7 @@ jobs:
         - name: downlaod Test file
           uses: actions/download-artifact@v3
           with:
-            name: output.txt
+            name: my-artifact
         - name: checking file is present
           run: ls 
     
@@ -40,7 +40,7 @@ jobs:
         - name: downlaod Test file
           uses: actions/download-artifact@v3
           with:
-            name: output.txt
+            name: my-artifact
         - name: checking file is present
           run: ls 
 
